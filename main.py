@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from langchain_google_genai import chatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain.agents import create__toolcalling_agent, AgentExecutor
