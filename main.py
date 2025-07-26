@@ -2,10 +2,10 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain.agents import create__toolcalling_agent, AgentExecutor
+from langchain.agents import create__tool_calling_agent, AgentExecutor
 from langchain_core.messages import HumanMessage, AIMessage
 from tools import tools, draft_email, schedule_event, reschedule_event, cancel_event, read_emails
-from assistant_output import AssistatOutput
+from assistant_output import AssistantOutput
 
 load_dotenv()
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.2)
