@@ -6,7 +6,7 @@ def schedule_event(event: str,time: str):
   return f"Scheduled event: '{event}' at {time}"
 
 def reschedule_event(event: str,oLd_time: str,new_time: str):
-  return f"Rescheduled '{event}' from {old_time}' to {new_time}"
+  return f"Rescheduled '{event}' from {old_time} to {new_time}"
 
 def cancel_event(event: str,time: str):
   return f"Canceled event '{event}' at {time}"
@@ -19,7 +19,7 @@ def draft_email(receipt: str, subject: str,body: str):
   filename = f"drafts/{recipient.replace('@','_')}_{datetime.now().strftime('%Y%m%d%H%M')}.txt"
   with open(filename,"w",encoding="utf-8") as f:
     f.write(f"Subject: {subject}\n\n{body}")
-  return f'Draft saved: {filename}"
+  return f'Draft saved: {filename}'
 
 tools = [
   Tool(name="schedule_event", func=schedule_event, description="schedule a calendar event"),
