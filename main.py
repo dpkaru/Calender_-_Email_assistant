@@ -27,7 +27,7 @@ prompt = ChatPromptTemplate.from_messages([
 ]).partial(format_instructions=parser.get_format_instructions())
 
 agent =  create_tool_calling_agent(llm=llm, prompt=prompt, tools=tools)
-executor = AgenticExecutor(agent=agent, tools=tools, verbose=True)
+executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 chat_history = []
 
